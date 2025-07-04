@@ -1,9 +1,10 @@
 import { test, expect } from '@playwright/test';
+import loginData from '../../testdata/logindata.json';
 
 test('test', async ({ page }) => {
   await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
-  await page.getByRole('textbox', { name: 'Username' }).fill('Admin');
-  await page.getByRole('textbox', { name: 'Password' }).fill('admin123');
+  await page.getByRole('textbox', { name: 'username' }).fill(loginData.validUser.username);
+  await page.getByRole('textbox', { name: 'password' }).fill(loginData.validUser.password);
   await page.getByRole('button', { name: 'Login' }).click();
 
   // asertion for login successfull
