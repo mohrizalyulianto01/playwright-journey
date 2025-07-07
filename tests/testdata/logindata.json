@@ -2,5 +2,13 @@
     "validUser": {
         "username": "Admin",
         "password": "admin123"
+    },
+
+    "createUser":{
+        "username": "Lewiss",
+        "password": "Lewis1234",
+        "confirmPassword":"Lewis1234"
     }
 }
+
+
